@@ -2,13 +2,9 @@ package tw.core;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.mockito.Mockito;
 import tw.core.exception.OutOfRangeAnswerException;
 import tw.core.generator.AnswerGenerator;
 import tw.core.generator.RandomIntGenerator;
-import tw.core.model.GuessResult;
-
-import static org.mockito.Mockito.when;
 
 /**
  * 在GameTest文件中完成Game中对应的单元测试
