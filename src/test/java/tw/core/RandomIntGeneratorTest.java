@@ -15,12 +15,19 @@ public class RandomIntGeneratorTest {
     @Test
     public void test_generateNums(){
         RandomIntGenerator randomIntGenerator = new RandomIntGenerator();
+        test_illegal_argument_generate_nums(randomIntGenerator);
+        test_legal_argument_generate_nums(randomIntGenerator);
+    }
+
+    private void test_legal_argument_generate_nums(RandomIntGenerator randomIntGenerator) {
         try {
             randomIntGenerator.generateNums(9,4);
         } catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
         }
+    }
 
+    private void test_illegal_argument_generate_nums(RandomIntGenerator randomIntGenerator) {
         try {
             randomIntGenerator.generateNums(4,9);
             fail("Expected an IllegalArgumentException to be thrown");
